@@ -1,0 +1,290 @@
+:root {
+  --ff-exo: 'Exo';
+  --radius: 5px;
+  --black: #0E0E0E;
+  --dark-gray: #2E2E2F;
+  --light-gray: #A5A5A5;
+  --white: #FFF;
+  --accent: #FF6500;
+  --accent: #F6C90E;
+}
+
+
+/* UTILITY CLASSES */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  inline-size: 462px;
+  inline-size: clamp(20.625rem, 90vw, 28.875rem);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+/* LAYOUT */
+.body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: var(--ff-exo), sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.header {
+  block-size: 17.5rem;
+  background: url('../assets/image/hero.png') no-repeat center/cover;
+}
+
+.nav {
+  justify-content: space-between;
+}
+
+.main {
+  position: relative;
+}
+
+.film-container {
+  margin-top: 2em;
+}
+
+.message-section {
+  text-align: center;
+  color: var(--dark-gray);
+}
+
+.footer {
+  padding-block: 1.5em;
+}
+
+
+/* SEARCH FORM */
+.search-form {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: stretch;
+  background-color: var(--dark-gray);
+  border-radius: var(--radius);
+  color: var(--light-gray);
+  overflow: hidden;
+}
+
+.input-field {
+  flex: 1;
+  position: relative;
+}
+
+.input-form {
+  padding: .55em 1em .55em 2.8em;
+  inline-size: 100%;
+  background-color: transparent;
+  text-transform: capitalize;
+}
+
+.search-btn {
+  padding-inline: 1.5em;
+  text-shadow: 0 0 2px var(--black);
+  background-color: var(--light-gray);
+  border: 1px solid transparent;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  transition: transform .3s ease;
+}
+
+.input-form,
+.search-btn {
+  font-weight: 500;
+  color: var(--white);
+}
+
+
+/* CARD */
+.film-card {
+  margin-block: 2em;
+  padding: 1em 1em 2em;
+  inline-size: 90vw;
+  max-inline-size: 24rem;
+  display: grid;
+  gap: 1em;
+  font-size: 1rem;
+}
+
+.film-card:not(:last-of-type) {
+  border-bottom: 2px solid var(--light-gray);
+}
+
+.film-poster {
+  inline-size: 100%;
+  aspect-ratio: 2/3;
+}
+
+.film-header,
+.film-meta {
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.film-header {
+  align-items: flex-start;
+}
+
+.film-details {
+  align-self: center;
+}
+
+.film-meta {
+  flex-wrap: wrap;
+  margin-bottom: .7em;
+  font-size: .8rem;
+}
+
+.film-name {
+  margin-bottom: 1em;
+  font-size: inherit;
+}
+
+.film-rating {
+  font-size: .8rem;
+}
+
+.watchlist-btn {
+  padding: .7em 1em;
+  inline-size: 100%;
+  gap: .5em;
+  font-size: .85rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  background-color: var(--white);
+  transition: background-color .3s ease, transform .3s ease;
+}
+
+.film-plot {
+  margin-top: 1em;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+
+/* TYPOGRAPHY */
+.nav-cta {
+  font-weight: 500;
+}
+
+.nav-cta--active {
+  font-size: clamp(1.8rem, 1rem + 4vw, 2.67rem);
+  font-weight: 800;
+}
+
+.message-text {
+  max-inline-size: 30ch;
+  margin-top: .25em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.attribution {
+  font-size: .8rem;
+  text-align: center;
+}
+
+.attribution-cta {
+  --radius: 3px;
+  padding: .25em;
+  border-radius: var(--radius);
+  text-decoration: underline wavy;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+
+/* ICONS */
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+}
+
+.film-icon {
+  inline-size: 4.5rem;
+}
+
+.plus-icon,
+.minus-icon {
+  inline-size: 1rem;
+  block-size: 1rem;
+}
+
+
+/* MEDIA QUERY */
+@media (width >= 37rem) {
+  .film-card {
+    max-inline-size: 37.5rem;
+    grid-template-columns: auto 1fr;
+  }
+
+  .film-poster {
+    max-inline-size: 10rem;
+  }
+
+  .watchlist-btn {
+    margin-left: auto;
+    inline-size: max-content;
+    inline-size: 6.8rem;
+    background-color: transparent;
+    color: inherit;
+  }
+}
+
+
+/* STATES */
+.search-btn:active,
+.watchlist-btn:active {
+  transform: scale(.9);
+}
+
+@media (hover:hover) {
+  .nav-cta:hover {
+    color: var(--accent);
+  }
+
+  .search-btn:hover {
+    border-color: currentColor;
+  }
+
+  .search-btn:hover,
+  .watchlist-btn:hover,
+  .attribution-cta:hover {
+    background-color: var(--dark-gray);
+    color: var(--white);
+  }
+
+  .attribution-cta:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+}

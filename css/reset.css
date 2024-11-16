@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  outline: none;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+figure {
+  margin: 0;
+}
+
+img {
+  inline-size: 100%;
+  block-size: 100%;
+  font-style: italic;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
