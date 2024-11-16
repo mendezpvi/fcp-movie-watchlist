@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Watchlist</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/index.css">
+
+  <link rel="manifest" href="../site.webmanifest">
+
+  <script type="module" src="../js/renderWatchList.js" defer></script>
+
+</head>
+
+<body class="body">
+  <header class="header flex">
+    <h1 class="sr-only">Movie Watchlist</h1>
+    <nav class="container flex nav">
+      <a href="../index.html" class="nav-cta">Find your film</a>
+      <a href="./pages/watchlist.html" class="nav-cta nav-cta--active">My Watchlist</a>
+    </nav>
+  </header>
+
+  <main class="main flex" id="main">
+    <div class="film-container flex-reverse" id="film-container"></div>
+  </main>
+
+  <footer class="footer">
+    <p class="attribution">Solo Project by <a href="https://v2.scrimba.com/courses" target="_blank"
+        rel="noopener noreferrer" class="attribution-cta">Scrimba</a> - Developed by <a
+        href="https://github.com/mendezpvi/fcp-movie-watchlist" target="_blank" rel="noopener noreferrer"
+        class="attribution-cta">VIMP</a></p>
+  </footer>
+</body>
+
+</html>

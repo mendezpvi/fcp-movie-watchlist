@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Watchlist</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+
+  <link rel="manifest" href="./site.webmanifest">
+
+  <script type="module" src="./js/index.js" defer></script>
+
+</head>
+
+<body class="body">
+  <header class="header flex">
+    <h1 class="sr-only">Movie Watchlist</h1>
+    <nav class="container flex nav">
+      <a href="./index.html" class="nav-cta nav-cta--active">Find your film</a>
+      <a href="./pages/watchlist.html" class="nav-cta">My Watchlist</a>
+    </nav>
+  </header>
+
+  <main class="main flex" id="main">
+    <form action="#" id="search-form" class="search-form container flex" role="search" autocomplete="off">
+      <div class="input-field">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="search-icon" aria-hidden="true"
+          focusable="true">
+          <path fill="currentColor"
+            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+        </svg>
+        <input type="search" name="search" id="search" class="input-form" placeholder="Blade Runner"
+          aria-label="Search for a movie.">
+      </div>
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+
+    <div class="film-container" id="film-container"></div>
+  </main>
+
+  <footer class="footer">
+    <p class="attribution">Solo Project by <a href="https://v2.scrimba.com/courses" target="_blank"
+        rel="noopener noreferrer" class="attribution-cta">Scrimba</a> - Developed by <a
+        href="https://github.com/mendezpvi/fcp-movie-watchlist" target="_blank" rel="noopener noreferrer"
+        class="attribution-cta">VIMP</a></p>
+  </footer>
+</body>
+
+</html>
